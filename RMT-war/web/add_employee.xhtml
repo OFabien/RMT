@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Username : <h:inputText value="#{employeeControler.newEmployee.name}"/><br/>
+            Password : <h:inputSecret value="#{employeeControler.newEmployee.password}" /><br/>
+            First Name : <h:inputText value="#{employeeControler.newEmployee.firstName}"/><br/>
+            Last Name : <h:inputText value="#{employeeControler.newEmployee.lastName}" /><br/>
+            Email : <h:inputText value="#{employeeControler.newEmployee.email}"/><br/>
+            Date Of Birth : 
+            <h:inputText value="#{employeeControler.newEmployee.birthDate}" >
+                <f:convertDateTime pattern="dd-MM-yyyy" />
+            </h:inputText> (jj/MM/YYYY)<br/>
+            <h:commandButton action="#{employeeControler.AddEmployee}" value="Add" />
+        </h:form>
+    </h:body>
+</html>
+
